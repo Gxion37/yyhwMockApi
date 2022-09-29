@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run createNewData
-    - run: npm run start:Server
+    
