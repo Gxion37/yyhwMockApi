@@ -4,12 +4,13 @@ const { faker } = require("@faker-js/faker");
 //For references, pls visit https://fakerjs.dev/guide/ for sample
 function generateGenreData(number) {
   const genres = [];
-  while (number > 0) {
+  let num = 1;
+  while (number >= num) {
     genres.push({
-      id: number,
+      id: num,
       name: faker.music.genre(),
     });
-    number--;
+    num++;
   }
 
   return genres; //without curly braces, this will only generate array

@@ -4,9 +4,10 @@ const { faker } = require("@faker-js/faker");
 //For references, pls visit https://fakerjs.dev/guide/ for sample
 function generateBookData(number) {
     const books = [];
-    while (number > 0) {
+    let num = 1;
+    while (number >= num) {
         books.push({
-            id: number,
+            id: num,
             restockAt: faker.date.recent(),
             name: faker.music.songName(),
             price: faker.commerce.price(),
@@ -16,7 +17,7 @@ function generateBookData(number) {
             genre: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
             createdAt: faker.date.past()
         });
-        number--;
+        num++;
     }
 
     return books;

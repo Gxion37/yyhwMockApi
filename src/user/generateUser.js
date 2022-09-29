@@ -2,12 +2,13 @@ const { faker } = require("@faker-js/faker");
 
 function generateUserData(number) {
     const users = [];
-    while (number > 0) {
+    let num = 1;
+    while (number >= num) {
         let gender = faker.name.sex();
         let firstName = faker.name.firstName(gender);
         let lastName = faker.name.lastName(gender);
         users.push({
-            id: number,
+            id: num,
             firstName: firstName,
             lastName: lastName,
             gender: gender,
@@ -19,7 +20,7 @@ function generateUserData(number) {
             accountName: faker.internet.userName(firstName, lastName),
             password: faker.internet.password(len = 15, memorable = true), //not a correct way to store password but this is a mockapi so...
         });
-        number--;
+        num++;
     }
 
     return users;

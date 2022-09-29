@@ -3,14 +3,15 @@ const { faker } = require("@faker-js/faker");
 //For references, pls visit https://fakerjs.dev/guide/ for sample
 function generateTopSeller(number) {
     const chart = [];
-    while (number > 0) {
+    let num = 1;
+    while (number >= num) {
         chart.push(
             {
                 topSellerBook: faker.datatype.number({ max: 100 }), //since we only have 100 books
-                id: number
+                id: num
             }
         );
-        number--;
+        num++;
     }
     return chart;
 }
