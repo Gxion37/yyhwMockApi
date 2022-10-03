@@ -15,7 +15,7 @@ const TOPSELLERCHART = generateTopSeller(10);
 const USERSLIST = generateUserData(200);
 fs.writeFileSync(   //create a mock database
     "./db.json",
-    JSON.stringify({ Genres: GENRES, Books: BOOKS, TopSeller: TOPSELLERCHART, Users: USERSLIST })
+    JSON.stringify({ genres: GENRES, books: BOOKS, topSeller: TOPSELLERCHART, users: USERSLIST })
 );
 
 console.log("yeah");

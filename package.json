@@ -3,8 +3,8 @@
   "main": "server.js",
   "scripts": {
     "createNewData": "node app.js",
-    "start": "node app.js & json-server db.json",
-    "start:Server": "json-server db.json"
+    "start": "node app.js & json-server --watch db.json",
+    "start:Server": "json-server --watch db.json"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",

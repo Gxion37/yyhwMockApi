@@ -7,8 +7,8 @@ function generateTopSeller(number) {
     while (number >= num) {
         chart.push(
             {
-                topSellerBook: faker.datatype.number({ max: 100 }), //since we only have 100 books
-                id: num
+                id: num,
+                booksId: faker.datatype.number({ min: 1, max: 100 })//since we only have 100 books
             }
         );
         num++;
