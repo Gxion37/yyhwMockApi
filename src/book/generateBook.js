@@ -14,7 +14,7 @@ function generateBookData(number) {
             description: faker.commerce.productDescription(),
             bookCover: faker.image.abstract(640, 480, true),
             likes: faker.datatype.number(),
-            genre: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
+            genre: faker.datatype.number({ min: 1, max: 15 }),
             createdAt: faker.date.past()
         });
         num++;

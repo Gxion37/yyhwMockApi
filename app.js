@@ -9,7 +9,7 @@ const generateUserData = require("./src/user/generateUser");
 //For references, pls visit https://fakerjs.dev/guide/ for sample
 
 // for REST link, pls visit https://jsonplaceholder.typicode.com/guide/ for references
-const GENRES = generateGenre(5);
+const GENRES = generateGenre(15);
 const BOOKS = generateBookData(100);
 const TOPSELLERCHART = generateTopSeller(10);
 const USERSLIST = generateUserData(200);

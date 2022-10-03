@@ -6,9 +6,10 @@ function generateGenreData(number) {
   const genres = [];
   let num = 1;
   while (number >= num) {
+    let genre = faker.helpers.unique(faker.music.genre)
     genres.push({
       id: num,
-      name: faker.music.genre(),
+      name: genre,
     });
     num++;
   }
